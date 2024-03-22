@@ -7,10 +7,7 @@ import {
 } from '../controllers/product/productController'
 import { authenticateToken } from '../middleware/authMiddleware'
 import { validateRequest } from '../middleware/requestValidationMiddleware'
-import {
-  productSchema,
-  updateProductSchema,
-} from '../controllers/product/validation/productValidation'
+import { productSchema, updateProductSchema } from '../services/product/validation/productValidation'
 
 const router: Router = Router()
 
