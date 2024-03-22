@@ -1,8 +1,10 @@
 import { Request } from 'express';
 
+export {}
+
 declare global {
   namespace Express {
-    interface Request {
+    export interface Request {
       user?: any;
     }
   }

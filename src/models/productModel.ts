@@ -16,6 +16,6 @@ const ProductSchema: Schema = new Schema({
   category: { type: String, required: true },
   imageUrl: { type: String, required: true },
   quantity: { type: Number, required: true },
-})
+}, { timestamps: true })
 
 export default model<IProduct>('Product', ProductSchema)

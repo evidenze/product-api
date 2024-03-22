@@ -5,7 +5,7 @@ import { sendUnauthorizedResponse } from '../utils/responseUtils'
 
 dotenv.config()
 
-const secretKey = process.env.JWT_KEY || ''
+const secretKey = process.env.JWT_KEY || '';
 
 /**
  * Middleware function to authenticate JWT token.
@@ -16,7 +16,7 @@ const secretKey = process.env.JWT_KEY || ''
  * @returns {any} - Returns next() if authentication succeeds, otherwise sends a 403 Forbidden response.
  */
 export const authenticateToken = (
-  req: any,
+  req: Request,
   res: Response,
   next: NextFunction,
 ): any => {
@@ -41,7 +41,7 @@ export const authenticateToken = (
       })
     }
     // Attach the user object to the request for further processing
-    req.user = user
+    req.user = user;
     // Call the next middleware function
     next()
   })
