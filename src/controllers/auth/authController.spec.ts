@@ -1,10 +1,6 @@
 import { login, register } from '../auth/authController'
 import { processLogin, processRegister } from '../../services/auth/authService' // Import individual functions for mocking
 import { Request, Response } from 'express'
-import {
-  sendSuccessResponse,
-  sendUnauthorizedResponse,
-} from '../../utils/responseUtils'
 
 jest.mock('../../services/auth/authService')
 
